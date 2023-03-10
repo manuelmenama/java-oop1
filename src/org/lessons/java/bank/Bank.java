@@ -11,11 +11,12 @@ public class Bank {
         account1.setName(scan.nextLine());
 
         account1.addAmount(1000.50);
-        account1.takingAmount(1002.5);
+
 
         System.out.println("Numero conto: " + account1.getAccountNumber());
         System.out.println("Nome correntista: " + account1.getName());
         System.out.println("Saldo corrente: " + account1.getBalance());
+        System.out.println(account1.takingAmount(1002.5));
 
     }
 }

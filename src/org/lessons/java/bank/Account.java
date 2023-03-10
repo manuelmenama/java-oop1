@@ -4,6 +4,7 @@ import java.util.Random;
 
 public class Account {
     //CAMPI
+    private static boolean excessBalance = false;
     private final int accountNumber;
 
     private String name;
@@ -44,8 +45,15 @@ public class Account {
         this.balance += amount;
     }
 
-    public void takingAmount(double amount) {
+    public String takingAmount(double amount) {
+        if (amount > this.balance){
+            excessBalance = true;
+            return "La che si intende prelevare eccede il saldo.";
+        }
+        if (!excessBalance) {
+            this.balance -= amount;
+        }
+        return "Operazione andata a buon fine.";
 
-        this.balance -= amount;
     }
 }
