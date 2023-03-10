@@ -11,8 +11,8 @@ public class Bank {
         Scanner scan = new Scanner(System.in);
         System.out.println("*** Benvenuto nella tua banca vera ***");
         System.out.print("Inserisci il tuo nome: ");
-        Account account1 = new Account();
-        account1.setName(scan.nextLine());
+        Account account1 = new Account(scan.nextLine());
+        //account1.setName();
 
 
         System.out.println("*** Riepilogo dei tuoi dati ***");

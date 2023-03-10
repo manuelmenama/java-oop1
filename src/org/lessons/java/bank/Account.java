@@ -12,10 +12,17 @@ public class Account {
     private double balance;
 
     //COSTRUTTORI
-    Account() {
+    /*Account() {
         Random random = new Random();
         accountNumber = random.nextInt(1, 1000000);
+    }*/
+
+    Account(String name) {
+        Random random = new Random();
+        accountNumber = random.nextInt(1, 1000000);
+        this.name = name;
     }
+
 
     //GETTER E SETTER
     //getter
