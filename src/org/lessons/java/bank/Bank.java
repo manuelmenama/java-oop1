@@ -44,6 +44,7 @@ public class Bank {
 
         } while (choise == 1 || choise == 2);
 
+        scan.close();
 
     }
 }

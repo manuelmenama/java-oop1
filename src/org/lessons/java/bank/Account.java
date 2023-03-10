@@ -12,7 +12,7 @@ public class Account {
     private double balance;
 
     //COSTRUTTORI
-    /*Account() {
+    /* Account() {
         Random random = new Random();
         accountNumber = random.nextInt(1, 1000000);
     }*/
