@@ -1,5 +1,6 @@
 package org.lessons.java.shop;
 
+import java.text.DecimalFormat;
 import java.util.Random;
 
 public class Product {
@@ -16,7 +17,7 @@ public class Product {
     * descrizione
     * prezzo
     * */
-    private int code;
+    private final int code;
     private String name;
     private String description;
     private double price;
@@ -49,6 +50,7 @@ public class Product {
         return vat;
     }
 
+
     //setter
 
     public void setName(String name) {
@@ -63,10 +65,29 @@ public class Product {
         this.description = description;
     }
 
-    /*public static void setVat(double vat) {
+    public static void setVat(double vat) {
         Product.vat = vat;
-    }*/
+    }
 
     //metodi
+
+    public String getPriceWithVat () {
+        DecimalFormat decimalFormat = new DecimalFormat("0.00 €");
+        double totalPrice;
+        totalPrice = price + price * vat;
+        return decimalFormat.format(totalPrice);
+    }
+
+    public String getPriceFormatted () {
+        DecimalFormat decimalFormat = new DecimalFormat("0.00 €");
+
+        return decimalFormat.format(price);
+    }
+
+    public String getCodeName () {
+        DecimalFormat decimalFormat = new DecimalFormat("000000000");
+
+        return decimalFormat.format(code) + "-" + name.toLowerCase();
+    }
 
 }
