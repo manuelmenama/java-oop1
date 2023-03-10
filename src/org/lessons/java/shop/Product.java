@@ -4,11 +4,7 @@ import java.text.DecimalFormat;
 import java.util.Random;
 
 public class Product {
-    //costanti
-    /*
-    * iva
-    * */
-    private static double vat = 0.2;
+
 
     //campi
     /*
@@ -21,6 +17,9 @@ public class Product {
     private String name;
     private String description;
     private double price;
+
+    private static double vat = 0.2;
+
 
     //costruttori
     public Product() {

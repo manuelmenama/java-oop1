@@ -55,7 +55,7 @@ public class Account {
     public String takingAmount(double amount) {
         if (amount > this.balance){
             excessBalance = true;
-            return "La che si intende prelevare eccede il saldo.";
+            return "La cifra che si intende prelevare eccede il saldo.";
         }
         if (!excessBalance) {
             this.balance -= amount;
